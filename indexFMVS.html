@@ -1,0 +1,297 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+    <meta charset="UTF-8">
+    <title>FMVS – Hygiene Solutions | Francisco Monteiro Vinhas Santos</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    
+    <style>
+        :root {
+            --fmvs-green: #4d6236; 
+            --fmvs-dark: #2d3436;
+            --light-bg: #fdfdfd;
+            --whatsapp-color: #25d366;
+            --transition-smooth: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+        }
+
+        /* 1. Animação de Entrada (Fade-In) */
+        @keyframes fadeInPage {
+            from { opacity: 0; transform: translateY(15px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+
+        body {
+            margin: 0;
+            font-family: 'Montserrat', sans-serif;
+            background: var(--light-bg);
+            color: var(--fmvs-dark);
+            line-height: 1.6;
+            opacity: 0; /* Começa invisível para a animação */
+            animation: fadeInPage 0.8s ease-out forwards; /* Aplica a animação */
+            animation-delay: 0.2s;
+        }
+
+        /* Header */
+        .header {
+            background: #ffffff;
+            padding: 60px 20px;
+            text-align: center;
+            border-bottom: 4px solid var(--fmvs-green);
+            position: relative;
+        }
+        .header img { 
+            max-width: 280px; 
+            height: auto; 
+            transition: var(--transition-smooth);
+        }
+        /* Efeito de Escala no Logo ao passar o rato */
+        .header img:hover { transform: scale(1.03); }
+
+        .header p { 
+            color: var(--fmvs-green); 
+            font-weight: 600; 
+            text-transform: uppercase; 
+            letter-spacing: 3px; 
+            margin-top: 20px;
+            font-size: 14px;
+        }
+
+        .container { max-width: 1000px; margin: 0 auto; padding: 50px 20px; }
+
+        .hero-text { text-align: center; margin-bottom: 60px; }
+        .hero-text h1 { font-size: 32px; color: var(--fmvs-green); font-weight: 700; margin-bottom: 15px; }
+        .hero-text p { font-size: 18px; color: #555; max-width: 700px; margin: 0 auto; }
+
+        /* Grid de Serviços - COM EFEITOS */
+        .services {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 25px;
+            margin-bottom: 60px;
+        }
+        .service-card {
+            background: white;
+            padding: 40px 30px;
+            border-radius: 12px;
+            border: 1px solid #f0f0f0;
+            text-align: center;
+            /* 2. Efeito de Hover Suave */
+            transition: var(--transition-smooth);
+            box-shadow: 0 5px 15px rgba(0,0,0,0.03);
+            position: relative;
+            overflow: hidden;
+        }
+
+        /* Linha decorativa que aparece no hover */
+        .service-card::after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 100%;
+            height: 4px;
+            background: var(--fmvs-green);
+            transform: scaleX(0);
+            transition: var(--transition-smooth);
+        }
+
+        .service-card:hover {
+            transform: translateY(-10px); /* Elevação */
+            box-shadow: 0 15px 35px rgba(0,0,0,0.1); /* Sombra Projetada */
+            border-color: #e0e0e0;
+        }
+        
+        .service-card:hover::after {
+            transform: scaleX(1); /* Mostra a linha */
+        }
+
+        .service-card h3 { color: var(--fmvs-green); margin-bottom: 18px; font-size: 22px; font-weight: 600; }
+        .service-card p { font-size: 15px; color: #666; }
+
+        /* Contactos */
+        .contact-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 40px;
+            background: #fff;
+            padding: 50px;
+            border-radius: 16px;
+            box-shadow: 0 15px 45px rgba(0,0,0,0.07);
+            border: 1px solid #f5f5f5;
+        }
+        .location h4 { 
+            color: var(--fmvs-green); 
+            font-size: 20px;
+            font-weight: 600;
+            margin-top: 0;
+            margin-bottom: 15px;
+            padding-bottom: 10px;
+            border-bottom: 2px solid #eee;
+        }
+        .location p { margin: 8px 0; font-size: 15px; }
+        
+        .cta-box {
+            grid-column: 1 / -1;
+            text-align: center;
+            padding-top: 40px;
+            border-top: 1px solid #eee;
+            margin-top: 10px;
+        }
+
+        .btn {
+            display: inline-block;
+            padding: 16px 38px;
+            background: var(--fmvs-green);
+            color: white;
+            text-decoration: none;
+            border-radius: 8px;
+            font-weight: 700;
+            font-size: 15px;
+            transition: var(--transition-smooth);
+            margin: 12px;
+            border: 2px solid transparent;
+        }
+        .btn:hover { 
+            background: #3a4b29; /* Tom mais escuro do verde */
+            transform: translateY(-3px);
+            box-shadow: 0 8px 20px rgba(77,98,54,0.3);
+        }
+        
+        .btn-alt { 
+            background: transparent;
+            color: var(--fmvs-dark);
+            border: 2px solid var(--fmvs-dark);
+        }
+        .btn-alt:hover {
+            background: var(--fmvs-dark);
+            color: white;
+        }
+
+        /* 3. BOTÃO WHATSAPP COM PULSAR */
+        @keyframes whatsappPulse {
+            0% { box-shadow: 0 0 0 0 rgba(37, 211, 102, 0.5); }
+            70% { box-shadow: 0 0 0 15px rgba(37, 211, 102, 0); }
+            100% { box-shadow: 0 0 0 0 rgba(37, 211, 102, 0); }
+        }
+
+        .whatsapp-float {
+            position: fixed;
+            width: 65px;
+            height: 65px;
+            bottom: 40px;
+            right: 40px;
+            background-color: var(--whatsapp-color);
+            color: #FFF;
+            border-radius: 50px;
+            text-align: center;
+            font-size: 32px;
+            box-shadow: 2px 5px 15px rgba(0,0,0,0.2);
+            z-index: 1000;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            transition: var(--transition-smooth);
+            /* Aplica o pulsar constante */
+            animation: whatsappPulse 2s infinite;
+        }
+        .whatsapp-float:hover {
+            background-color: #128C7E;
+            transform: scale(1.1) rotate(5deg);
+            color: white;
+        }
+
+        .footer {
+            text-align: center;
+            padding: 40px 20px;
+            font-size: 14px;
+            background: #f8fafc;
+            color: #777;
+            margin-top: 60px;
+            border-top: 1px solid #eee;
+        }
+
+        /* Responsividade para Animações */
+        @media (max-width: 768px) {
+            .contact-grid { grid-template-columns: 1fr; padding: 30px; }
+            .whatsapp-float { bottom: 20px; right: 20px; width: 55px; height: 55px; font-size: 28px; }
+            .hero-text h1 { font-size: 26px; }
+            /* Desativar animações de scroll no mobile para melhor performance (opcional) */
+            [data-aos] { pointer-events: none !important; transform: none !important; animation: none !important; opacity: 1 !important; }
+        }
+    </style>
+</head>
+<body>
+
+<a href="https://wa.me/351917193932?text=Olá,%20gostaria%20de%20obter%20mais%20informações%20sobre%20as%20vossas%20soluções%20de%20higiene." class="whatsapp-float" target="_blank" title="Fale connosco no WhatsApp">
+    <i class="fab fa-whatsapp"></i>
+</a>
+
+<div class="header">
+    <img src="logo-horizontal-slogan.png" alt="FMVS Hygiene Solutions">
+    <p>O nosso novo website oficial está a chegar</p>
+</div>
+
+<div class="container">
+    <div class="hero-text" data-aos="fade-up">
+        <h1>Soluções Profissionais de Higiene e Limpeza</h1>
+        <p>Desde 1994 a servir o mercado B2B e B2C com excelência e rigor técnico.</p>
+    </div>
+
+    <div class="services">
+        <div class="service-card" data-aos="fade-up" data-aos-delay="100">
+            <h3>Papel & Tissue</h3>
+            <p>Gama completa de consumíveis industriais e profissionais para o seu negócio.</p>
+        </div>
+        <div class="service-card" data-aos="fade-up" data-aos-delay="200">
+            <h3>Sistemas de Higiene</h3>
+            <p>Dispensadores e soluções integradas para instalações sanitárias e cozinhas.</p>
+        </div>
+        <div class="service-card" data-aos="fade-up" data-aos-delay="300">
+            <h3>Loja Online</h3>
+            <p>Produtos de qualidade profissional disponíveis para o consumidor final.</p>
+        </div>
+    </div>
+
+    <div class="contact-grid" data-aos="zoom-in" data-aos-duration="600">
+        <div class="location">
+            <h4>Sede (Maia)</h4>
+            <p><strong>Rua de Terramonte, 781 - Armazém C-35</strong></p>
+            <p>4470-122 Maia</p>
+            <p><strong>Tel:</strong> 229 069 460/8</p>
+        </div>
+        <div class="location">
+            <h4>Filial (Lisboa)</h4>
+            <p><strong>Av. 5 de Outubro, 12A</strong></p>
+            <p>1050-056 Lisboa</p>
+            <p><strong>Tel:</strong> 808 202 303</p>
+        </div>
+        
+        <div class="cta-box">
+            <p style="font-size: 16px; margin-bottom: 20px;">Precisa de um orçamento ou tem dúvidas comerciais?</p>
+            <a href="mailto:comercial@franciscovinhas.com" class="btn">Enviar Email Comercial</a>
+            <a href="https://www.higieneemcasa.com" target="_blank" class="btn btn-alt">Visitar Loja Online</a>
+            <p style="margin-top: 20px; font-size: 14px; color: #777;"><strong>Website Institucional:</strong> www.franciscovinhas.com</p>
+        </div>
+    </div>
+</div>
+
+<div class="footer">
+    © 2026 FMVS – Francisco Monteiro Vinhas Santos. Todos os direitos reservados.
+</div>
+
+<script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+<script>
+    // Inicializa a biblioteca de animações
+    AOS.init({
+        duration: 800, // Duração padrão da animação (ms)
+        easing: 'ease-in-out-cubic', // Curva de aceleração suave
+        once: true, // A animação acontece apenas uma vez ao fazer scroll
+        offset: 100 // Distância do elemento ao viewport para ativar a animação
+    });
+</script>
+
+</body>
+</html>

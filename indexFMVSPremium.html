@@ -1,0 +1,253 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+    <meta charset="UTF-8">
+    <title>FMVS – Hygiene Solutions | Premium B2B</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&family=Inter:wght@300;400;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    
+    <style>
+        :root {
+            --fmvs-green: #4d6236; /* Verde Corporativo */
+            --fmvs-gold: #a68b5a;  /* Tom de acento premium */
+            --dark-navy: #1a1e23;  /* Texto principal quase preto */
+            --bg-premium: #fcfcfc;
+            --glass-bg: rgba(255, 255, 255, 0.8);
+            --transition-premium: all 0.6s cubic-bezier(0.16, 1, 0.3, 1);
+        }
+
+        body {
+            margin: 0;
+            font-family: 'Inter', sans-serif;
+            background-color: var(--bg-premium);
+            color: var(--dark-navy);
+            scroll-behavior: smooth;
+        }
+
+        /* Header com Glassmorphism */
+        header {
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+            background: var(--glass-bg);
+            backdrop-filter: blur(10px);
+            -webkit-backdrop-filter: blur(10px);
+            padding: 20px 0;
+            border-bottom: 1px solid rgba(0,0,0,0.05);
+            text-align: center;
+        }
+
+        .header-logo {
+            max-width: 220px;
+            transition: var(--transition-premium);
+        }
+
+        /* Hero Section */
+        .hero {
+            padding: 120px 20px 80px;
+            text-align: center;
+        }
+
+        .hero h1 {
+            font-family: 'Playfair Display', serif; /* Fonte serifada para luxo */
+            font-size: 3.5rem;
+            margin: 0 auto 20px;
+            max-width: 900px;
+            color: var(--dark-navy);
+            line-height: 1.1;
+        }
+
+        .hero p {
+            font-size: 1.2rem;
+            font-weight: 300;
+            color: #666;
+            letter-spacing: 1px;
+            text-transform: uppercase;
+        }
+
+        .container { max-width: 1200px; margin: 0 auto; padding: 0 30px; }
+
+        /* Grid Reveal */
+        .grid-reveal {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 40px;
+            margin: 60px 0;
+        }
+
+        .premium-card {
+            background: #fff;
+            padding: 50px 30px;
+            border-radius: 4px; /* Cantos menos arredondados para ser mais sério */
+            border: 1px solid #f0f0f0;
+            transition: var(--transition-premium);
+            text-align: left;
+            position: relative;
+        }
+
+        .premium-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 20px 40px rgba(0,0,0,0.05);
+            border-color: var(--fmvs-green);
+        }
+
+        .premium-card .card-number {
+            font-family: 'Playfair Display', serif;
+            font-size: 3rem;
+            color: rgba(77, 98, 54, 0.1);
+            position: absolute;
+            top: 10px;
+            right: 20px;
+        }
+
+        .premium-card h3 {
+            font-size: 1.4rem;
+            margin-bottom: 15px;
+            color: var(--fmvs-green);
+            font-weight: 600;
+        }
+
+        /* Contact Section */
+        .contact-section {
+            background: #1a1e23;
+            color: #fff;
+            padding: 100px 30px;
+            border-radius: 0;
+            margin-top: 100px;
+        }
+
+        .contact-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 80px;
+        }
+
+        .contact-item h4 {
+            color: var(--fmvs-green);
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            margin-bottom: 25px;
+            font-size: 0.9rem;
+        }
+
+        .contact-item p {
+            font-size: 1.1rem;
+            font-weight: 300;
+            opacity: 0.8;
+            line-height: 1.8;
+        }
+
+        /* Premium Buttons */
+        .btn-premium {
+            display: inline-block;
+            padding: 18px 45px;
+            background: var(--fmvs-green);
+            color: #fff;
+            text-decoration: none;
+            font-weight: 600;
+            font-size: 0.9rem;
+            letter-spacing: 2px;
+            text-transform: uppercase;
+            transition: var(--transition-premium);
+            margin-top: 30px;
+        }
+
+        .btn-premium:hover {
+            background: #fff;
+            color: var(--fmvs-green);
+        }
+
+        /* WhatsApp Button */
+        .whatsapp-float {
+            position: fixed;
+            bottom: 40px;
+            right: 40px;
+            background: #25d366;
+            color: white;
+            width: 60px;
+            height: 60px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 28px;
+            box-shadow: 0 10px 20px rgba(0,0,0,0.1);
+            z-index: 2000;
+            transition: var(--transition-premium);
+        }
+
+        .whatsapp-float:hover { transform: scale(1.1); }
+
+        @media (max-width: 900px) {
+            .grid-reveal { grid-template-columns: 1fr; }
+            .hero h1 { font-size: 2.5rem; }
+            .contact-grid { grid-template-columns: 1fr; gap: 40px; }
+        }
+    </style>
+</head>
+<body>
+
+<header>
+    <img src="logo-horizontal-slogan.png" alt="FMVS Logo" class="header-logo">
+</header>
+
+<div class="hero" data-aos="fade-down">
+    <p>Experiência. Confiança. Higiene.</p>
+    <h1>A Excelência em Soluções Profissionais de Higiene</h1>
+</div>
+
+<div class="container">
+    <div class="grid-reveal">
+        <div class="premium-card" data-aos="fade-up" data-aos-delay="100">
+            <span class="card-number">01</span>
+            <h3>Papel & Tissue</h3>
+            <p>Consumíveis de alto desempenho desenhados para as exigências do setor profissional e industrial.</p>
+        </div>
+        <div class="premium-card" data-aos="fade-up" data-aos-delay="200">
+            <span class="card-number">02</span>
+            <h3>Sistemas Técnicos</h3>
+            <p>Engenharia de higiene aplicada a dispensadores e sistemas de dosagem de última geração.</p>
+        </div>
+        <div class="premium-card" data-aos="fade-up" data-aos-delay="300">
+            <span class="card-number">03</span>
+            <h3>Consultoria B2B</h3>
+            <p>Acompanhamento personalizado para otimizar os custos e a eficácia da limpeza na sua empresa.</p>
+        </div>
+    </div>
+</div>
+
+<section class="contact-section" data-aos="fade-in">
+    <div class="container">
+        <div class="contact-grid">
+            <div class="contact-item">
+                <h4>Sede Norte</h4>
+                <p>Rua de Terramonte, 781 - Armazém C-35<br>4470-122 Maia, Portugal</p>
+                <p>T. 229 069 460</p>
+            </div>
+            <div class="contact-item">
+                <h4>Filial Sul</h4>
+                <p>Av. 5 de Outubro, 12A<br>1050-056 Lisboa, Portugal</p>
+                <p>T. 808 202 303</p>
+            </div>
+        </div>
+        <div style="text-align:center; margin-top:60px;">
+            <a href="mailto:comercial@franciscovinhas.com" class="btn-premium">Solicitar Proposta Comercial</a>
+            <br><br>
+            <p style="opacity:0.5; font-size:0.8rem;">www.franciscovinhas.com | www.higieneemcasa.com</p>
+        </div>
+    </div>
+</section>
+
+<a href="https://wa.me/351917193932" class="whatsapp-float" target="_blank">
+    <i class="fab fa-whatsapp"></i>
+</a>
+
+<script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+<script>
+    AOS.init({ duration: 1000, once: true, easing: 'ease-out-quart' });
+</script>
+
+</body>
+</html>
