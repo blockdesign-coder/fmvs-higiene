@@ -1,30 +1,26 @@
-📂 Case Study: FMVS – Digital Transition & Legacy
-Cliente: FMVS (Francisco Vinhas)
+# FMVS – Digital Transition & Legacy (2026)
 
-Setor: Higiene e Limpeza Profissional (B2B/B2C)
+Este repositório contém a *One-Page* oficial desenvolvida pela **Blockdesign** para a **FMVS – Francisco Monteiro Vinhas Santos**.
 
-Ano: 2026
+## 🎯 Visão do Projeto
+Com 50 anos de solidez no mercado português, a FMVS necessitava de uma montra digital que respeitasse o seu legado, enquanto implementava uma estratégia de conversão moderna para os mercados B2B e B2C.
 
-🎯 O Desafio
-A FMVS, uma empresa com 50 anos de solidez no mercado, necessitava de uma presença digital de transição que refletisse a sua autoridade histórica enquanto preparava o seu novo ecossistema web. O objetivo era elevar a marca para um posicionamento Premium B2B, integrando parceiros estratégicos (Lucart e Mistolin).
+## 💡 Soluções Implementadas
+* **Estratégia de Conteúdo (SEO-Driven):** Narrativa centrada na autoridade histórica da empresa, otimizada com palavras-chave de intenção de compra para melhorar a visibilidade orgânica.
+* **UX/UI Premium:** Interface minimalista, *mobile-first*, com animações fluídas (AOS) e foco na jornada do utilizador.
+* **Conversão B2B:** Integração estratégica de canais diretos (WhatsApp e E-mail comercial) e destaque para parceiros globais (Lucart Professional e Mistolin Pro).
+* **Performance:** Código limpo (HTML5/CSS3), garantindo tempos de carregamento instantâneos.
 
-💡 A Solução Blockdesign
-Desenvolvemos uma One-Page de alta performance focada em três pilares:
+## 🛠️ Tecnologias Utilizadas
+* **Frontend:** HTML5, CSS3 (Flexbox/Grid), JavaScript.
+* **Animações:** AOS (Animate On Scroll Library).
+* **Identidade:** Paleta de cores institucional e tipografia otimizada para leitura premium.
+* **Segurança:** Alojamento via GitHub Pages com SSL automático.
 
-Autoridade de Marca: Reforço do legado de meio século e credibilidade institucional.
+## 📈 Impacto de Negócio
+Este projeto não atua apenas como uma página institucional, mas como uma ferramenta de venda ativa, unificando a presença digital da marca entre a sede (Norte) e a filial (Sul), e conectando o segmento profissional à loja online `higieneemcasa.com`.
 
-Design Premium: Estética minimalista com tipografia híbrida e efeitos de reveal suaves para uma experiência de utilizador sofisticada.
+---
 
-Conversão Estratégica: Implementação de canais diretos (WhatsApp e E-mail) e integração visual de parceiros de renome europeu.
-
-🛠️ Especificações Técnicas
-Performance: Código limpo (HTML5/CSS3) com carregamento ultra-rápido.
-
-UX/UI: Animações On-Scroll (AOS) e design responsivo otimizado para decisores B2B.
-
-Marketing: Estratégia de tráfego focada em Google Ads com filtragem de palavras-chave negativas para otimização de ROI.
-
-🚀 Resultados
-Uma montra digital segura (SSL/GitHub Pages) que serve como ferramenta de venda ativa para o departamento comercial, garantindo que a primeira impressão da marca seja tão profissional quanto o serviço que prestam há 50 anos.
-
-by Block Design @
+**Desenvolvido por Blockdesign © 2026**
+*Transformando tradição em autoridade digital.*
